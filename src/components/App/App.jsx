@@ -3,6 +3,8 @@ import AppRoutes from "../Routes/Routes";
 import Footer from "../Footer/Footer";
 import Siderbar from "../Sidebar/Siderbar";
 import Header from "../Header/Header";
+import '../styles/app.css';
+
 
 export const App = () => {
   return (
