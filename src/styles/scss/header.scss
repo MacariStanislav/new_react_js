@@ -1,0 +1,33 @@
+@import './basic/reset';
+@import'./basic/basic';
+@import './basic/variabil';
+
+header {
+  display: flex;
+  background: $fon;
+  align-items: center;
+
+  .text__input {
+    margin-left: 95.89px;
+    display: flex;
+
+    input {
+      border: none;
+      background-color: transparent;
+      width: 365px;
+      height: 42px;
+      margin-left: 30px;
+      color: #b8b8b8;
+    }
+
+    align-items: center;
+    background: #191919;
+    border-radius: 6px;
+
+    img {
+      width: 20.22px;
+      height: 20.22px;
+      margin-left: 15px;
+    }
+  }
+}

@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import ProductList from './components/ProductList';
 import ProductDetails from './components/ProductDetails';
 import Cart from './components/Cart';
-import './styles/App.css';
+import './styles/css/App.css'
 
 function App() {
   return (
