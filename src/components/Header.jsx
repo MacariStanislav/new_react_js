@@ -1,49 +1,51 @@
 import React, { useState } from "react";
-import '../styles/css/header.css';
+import "../styles/css/header.css";
 import logo from "../img/logo/LOGO 1.svg";
-const Header = () => {
-  // Состояние для управления значением input
-  const [searchValue, setSearchValue] = useState("Search for anything...");
+import monkey from "../img/icon/monkey.svg";
+import lupa from "../img/icon/lupa.svg";
+import serdte from '../img/icon/serdte.svg';
+import corzina from '../img/icon/corzina.svg';
+import RegistrationPanel from './RegistrationPanel'; 
 
-  // Обработчик изменения текста в input
+const Header = () => {
+  const [searchValue, setSearchValue] = useState("Search for anything...");
+  const [isRegistrationVisible, setRegistrationVisible] = useState(false); // Состояние для регистрации
+
   const handleSearchChange = (e) => {
     setSearchValue(e.target.value);
   };
 
-  // Обработчик для очистки значения input при фокусе
   const handleFocus = () => {
     if (searchValue === "Search for anything...") {
       setSearchValue("");
     }
   };
 
-  // Обработчик для восстановления текста по умолчанию, если input пуст
   const handleBlur = () => {
     if (searchValue === "") {
       setSearchValue("Search for anything...");
     }
   };
 
+  const openRegistrationPanel = () => {
+    setRegistrationVisible(true);
+  };
+
+  const closeRegistrationPanel = () => {
+    setRegistrationVisible(false);
+  };
+
   return (
     <header>
       <img src={logo} className="logo" />
-
-      <div>
-        <img
-          src="path/to/your/monkey.png"
-          alt="Monkey"
-          className="monkey-img"
-        />
+      <div className="circul">
+        <img src={monkey} alt="Monkey" />
       </div>
 
-      <p id="user">User</p>
+      <h4 id="user" onClick={openRegistrationPanel} style={{ cursor: 'pointer' }}>User</h4>
 
       <div className="text__input">
-        <img
-          src="img/icon/lupa.svg"
-          alt="Search icon"
-          className="search-icon"
-        />
+        <img src={lupa} alt="Search icon" className="search-icon" />
         <input
           type="text"
           className="search-zone"
@@ -53,8 +55,14 @@ const Header = () => {
           onBlur={handleBlur}
         />
       </div>
+
+      <a href="" className="serdte"><img src={serdte} alt="serdte-icon" /> </a>
+      <a href=""><img src={corzina} alt="cart-icon" /></a>
+
+      {isRegistrationVisible && <RegistrationPanel closePanel={closeRegistrationPanel} />}
     </header>
   );
 };
 
 export default Header;
+
