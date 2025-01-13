@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../styles/css/header.css";
+import "../../styles/css/header.css";
 
 const RegistrationPanel = ({ closePanel }) => {
   const [isVisible, setIsVisible] = useState(true); // Состояние для плавного появления

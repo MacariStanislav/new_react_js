@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "../styles/css/header.css";
-import logo from "../img/logo/LOGO 1.svg";
-import monkey from "../img/icon/monkey.svg";
-import lupa from "../img/icon/lupa.svg";
-import serdte from '../img/icon/serdte.svg';
-import corzina from '../img/icon/corzina.svg';
+import "../../styles/css/header.css";
+import logo from "../../img/logo/LOGO 1.svg";
+import monkey from "../../img/icon/monkey.svg";
+import lupa from "../../img/icon/lupa.svg";
+import serdte from '../../img/icon/serdte.svg';
+import corzina from '../../img/icon/corzina.svg';
 import RegistrationPanel from './RegistrationPanel'; 
 
 const Header = () => {

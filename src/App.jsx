@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';  
-import Header from './components/Header';
-import Footer from './components/Footer';
-import ProductList from './components/ProductList';
-import ProductDetails from './components/ProductDetails';
-import Cart from './components/Cart';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import ProductList from './components/Product/ProductList';
+import ProductDetails from './components/Product/ProductDetails';
+import Cart from './components/catalog/Cart';
 import './styles/css/App.css'
 
 function App() {
